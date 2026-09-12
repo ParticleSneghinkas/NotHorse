@@ -1,9 +1,22 @@
 [gd_scene format=3 uid="uid://dd1fl00m4o7xv"]
 
+[ext_resource type="Script" uid="uid://24s7wn02ge8j" path="res://scripts/game.gd" id="1_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://dx0xbju6plhki" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://lo70vvj6jicx" path="res://scenes/gameover_sound.tscn" id="2_iywne"]
+[ext_resource type="PackedScene" uid="uid://2vlxraalb0iu" path="res://scenes/gameover.tscn" id="2_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://mu85aqekpq7i" path="res://scenes/ground.tscn" id="2_yqjtg"]
 
 [node name="Game" type="Node2D" unique_id=1011008467]
-position = Vector2(79, 55)
+position = Vector2(-1, 0)
+script = ExtResource("1_lbhrr")
 
-[node name="CharacterBody2D" parent="." unique_id=1389151335 instance=ExtResource("1_uwrxv")]
-position = Vector2(667, 300)
+[node name="GameoverSound" parent="." unique_id=1904873126 instance=ExtResource("2_iywne")]
+
+[node name="Ground" parent="." unique_id=1458546769 instance=ExtResource("2_yqjtg")]
+position = Vector2(165, 600)
+
+[node name="Gameover" parent="." unique_id=1765524872 instance=ExtResource("2_lbhrr")]
+z_index = 1
+
+[node name="Dawg" parent="." unique_id=1389151335 instance=ExtResource("1_uwrxv")]
+position = Vector2(165, 41)

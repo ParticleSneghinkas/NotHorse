@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://lo70vvj6jicx"]
+
+[ext_resource type="AudioStream" uid="uid://u7ar2g2pn8re" path="res://assets/gameover.mp3" id="1_gebq8"]
+
+[sub_resource type="GDScript" id="GDScript_gebq8"]
+script/source = "extends AudioStreamPlayer2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="GameoverSound" type="AudioStreamPlayer2D" unique_id=711365797]
+process_mode = 3
+stream = ExtResource("1_gebq8")
+volume_db = 24.0
+script = SubResource("GDScript_gebq8")
