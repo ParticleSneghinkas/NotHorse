@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="NotHorse"
+run/main_scene="uid://dd1fl00m4o7xv"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
